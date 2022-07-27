@@ -10,6 +10,8 @@
 		034F264CCF81FC22A41D7D44 /* Pods_Outstargram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848622F364F32307A9278BAA /* Pods_Outstargram.framework */; };
 		2F62965928914E3800331A53 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F62965828914E3800331A53 /* FeedTableViewCell.swift */; };
 		2F62965C2891785900331A53 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F62965B2891785900331A53 /* UIButton+.swift */; };
+		2F62965F289179CC00331A53 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F62965E289179CC00331A53 /* ProfileViewController.swift */; };
+		2F629662289191FC00331A53 /* ProfileDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F629661289191FC00331A53 /* ProfileDataView.swift */; };
 		2F700F2D288FE58B004EA21E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F700F2C288FE58B004EA21E /* AppDelegate.swift */; };
 		2F700F2F288FE58B004EA21E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F700F2E288FE58B004EA21E /* SceneDelegate.swift */; };
 		2F700F31288FE58B004EA21E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F700F30288FE58B004EA21E /* FeedViewController.swift */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		2F62965828914E3800331A53 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		2F62965B2891785900331A53 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		2F62965E289179CC00331A53 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2F629661289191FC00331A53 /* ProfileDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataView.swift; sourceTree = "<group>"; };
 		2F700F29288FE58B004EA21E /* Outstargram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outstargram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F700F2C288FE58B004EA21E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F700F2E288FE58B004EA21E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +50,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F62965D2891799F00331A53 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				2F700F30288FE58B004EA21E /* FeedViewController.swift */,
+				2F62965828914E3800331A53 /* FeedTableViewCell.swift */,
+				2F62965B2891785900331A53 /* UIButton+.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		2F629660289191DC00331A53 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2F62965E289179CC00331A53 /* ProfileViewController.swift */,
+				2F629661289191FC00331A53 /* ProfileDataView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		2F700F20288FE58B004EA21E = {
 			isa = PBXGroup;
 			children = (
@@ -73,8 +96,6 @@
 				2F700F35288FE58D004EA21E /* Assets.xcassets */,
 				2F700F37288FE58D004EA21E /* LaunchScreen.storyboard */,
 				2F700F3A288FE58D004EA21E /* Info.plist */,
-				2F62965828914E3800331A53 /* FeedTableViewCell.swift */,
-				2F62965B2891785900331A53 /* UIButton+.swift */,
 			);
 			path = Outstargram;
 			sourceTree = "<group>";
@@ -83,7 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				2F700F40288FE851004EA21E /* TabBarController.swift */,
-				2F700F30288FE58B004EA21E /* FeedViewController.swift */,
+				2F629660289191DC00331A53 /* Profile */,
+				2F62965D2891799F00331A53 /* Feed */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -223,7 +245,9 @@
 				2F62965C2891785900331A53 /* UIButton+.swift in Sources */,
 				2F700F41288FE852004EA21E /* TabBarController.swift in Sources */,
 				2F700F2D288FE58B004EA21E /* AppDelegate.swift in Sources */,
+				2F62965F289179CC00331A53 /* ProfileViewController.swift in Sources */,
 				2F700F2F288FE58B004EA21E /* SceneDelegate.swift in Sources */,
+				2F629662289191FC00331A53 /* ProfileDataView.swift in Sources */,
 				2F62965928914E3800331A53 /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
