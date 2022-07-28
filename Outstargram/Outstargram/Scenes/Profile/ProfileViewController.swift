@@ -39,7 +39,7 @@ final class ProfileViewController: UIViewController{
         let button = UIButton()
         button.setTitle("팔로우", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 14.0, weight: .semibold)
+        button.titleLabel?.font = .systemFont(ofSize: 14.0, weight: .medium)
         button.backgroundColor = .systemBlue
         
         button.layer.cornerRadius = 3.0
@@ -52,7 +52,7 @@ final class ProfileViewController: UIViewController{
         let button = UIButton()
         button.setTitle("메세지", for: .normal)
         button.setTitleColor(.label, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 14.0, weight: .semibold)
+        button.titleLabel?.font = .systemFont(ofSize: 14.0, weight: .medium)
         button.backgroundColor = .white
         
         button.layer.cornerRadius = 3.0
@@ -66,6 +66,20 @@ final class ProfileViewController: UIViewController{
     private let followerDataView = ProfileDataView(title:"팔로워", count:1111)
     private let followingDataView = ProfileDataView(title:"팔로잉", count:12)
     
+    private lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 0.5
+        layout.minimumInteritemSpacing = 0.5
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .systemBackground
+        collectionView.register(ProfileCollectionViewCell.self, forCellWithReuseIdentifier: "ProfileCollectionViewCell")
+        collectionView.dataSource = self
+        collectionView.delegate = self
+
+        
+        return collectionView
+    }()
     
     override func viewDidLoad() {
         setupNavigationItems()
@@ -73,6 +87,32 @@ final class ProfileViewController: UIViewController{
     }
     
 }
+
+//delegate, datasource
+extension ProfileViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileCollectionViewCell", for: indexPath) as? ProfileCollectionViewCell
+        
+        cell?.setup(with: UIImage()) //named:"asset name" 하면 이미지 띄울 수 있음
+        
+        return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    
+    
+}
+
+extension ProfileViewController:  UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width: CGFloat = (collectionView.frame.width / 3) - 1.0
+        return CGSize(width: width, height: width)
+    }
+}
+
 
 private extension ProfileViewController{
     func setupNavigationItems(){
@@ -93,7 +133,7 @@ private extension ProfileViewController{
         dataStackView.distribution = .fillEqually
         
         
-        [profileImageView, dataStackView ,nameLabel, descriptionLabel, buttonStackView].forEach{view.addSubview($0)}
+        [profileImageView, dataStackView ,nameLabel, descriptionLabel, buttonStackView, collectionView].forEach{view.addSubview($0)}
         
         let inset: CGFloat = 16.0
         
@@ -127,6 +167,13 @@ private extension ProfileViewController{
             $0.top.equalTo(descriptionLabel.snp.bottom).offset(12.0)
             $0.leading.equalTo(descriptionLabel.snp.leading)
             $0.trailing.equalTo(nameLabel.snp.trailing)
+        }
+        
+        collectionView.snp.makeConstraints{
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
+            $0.top.equalTo(buttonStackView.snp.bottom).offset(16.0)
+            $0.bottom.equalToSuperview()
         }
     }
 }

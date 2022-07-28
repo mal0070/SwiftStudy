@@ -12,6 +12,7 @@
 		2F62965C2891785900331A53 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F62965B2891785900331A53 /* UIButton+.swift */; };
 		2F62965F289179CC00331A53 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F62965E289179CC00331A53 /* ProfileViewController.swift */; };
 		2F629662289191FC00331A53 /* ProfileDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F629661289191FC00331A53 /* ProfileDataView.swift */; };
+		2F6296692892497F00331A53 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6296682892497F00331A53 /* ProfileCollectionViewCell.swift */; };
 		2F700F2D288FE58B004EA21E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F700F2C288FE58B004EA21E /* AppDelegate.swift */; };
 		2F700F2F288FE58B004EA21E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F700F2E288FE58B004EA21E /* SceneDelegate.swift */; };
 		2F700F31288FE58B004EA21E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F700F30288FE58B004EA21E /* FeedViewController.swift */; };
@@ -25,6 +26,7 @@
 		2F62965B2891785900331A53 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		2F62965E289179CC00331A53 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2F629661289191FC00331A53 /* ProfileDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataView.swift; sourceTree = "<group>"; };
+		2F6296682892497F00331A53 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F700F29288FE58B004EA21E /* Outstargram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outstargram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F700F2C288FE58B004EA21E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F700F2E288FE58B004EA21E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			children = (
 				2F62965E289179CC00331A53 /* ProfileViewController.swift */,
 				2F629661289191FC00331A53 /* ProfileDataView.swift */,
+				2F6296682892497F00331A53 /* ProfileCollectionViewCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F700F31288FE58B004EA21E /* FeedViewController.swift in Sources */,
+				2F6296692892497F00331A53 /* ProfileCollectionViewCell.swift in Sources */,
 				2F62965C2891785900331A53 /* UIButton+.swift in Sources */,
 				2F700F41288FE852004EA21E /* TabBarController.swift in Sources */,
 				2F700F2D288FE58B004EA21E /* AppDelegate.swift in Sources */,
