@@ -19,6 +19,7 @@
 		2F700F36288FE58D004EA21E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F700F35288FE58D004EA21E /* Assets.xcassets */; };
 		2F700F39288FE58D004EA21E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F700F37288FE58D004EA21E /* LaunchScreen.storyboard */; };
 		2F700F41288FE852004EA21E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F700F40288FE851004EA21E /* TabBarController.swift */; };
+		2F9BF7962895393200DC26D0 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9BF7952895393200DC26D0 /* UploadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		2F700F38288FE58D004EA21E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F700F3A288FE58D004EA21E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F700F40288FE851004EA21E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		2F9BF7952895393200DC26D0 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		848622F364F32307A9278BAA /* Pods_Outstargram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Outstargram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C0131133D20C4DEC051819 /* Pods-Outstargram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Outstargram.debug.xcconfig"; path = "Target Support Files/Pods-Outstargram/Pods-Outstargram.debug.xcconfig"; sourceTree = "<group>"; };
 		B93BDE89F6ED9A2E0FE4F2DB /* Pods-Outstargram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Outstargram.release.xcconfig"; path = "Target Support Files/Pods-Outstargram/Pods-Outstargram.release.xcconfig"; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				2F700F30288FE58B004EA21E /* FeedViewController.swift */,
 				2F62965828914E3800331A53 /* FeedTableViewCell.swift */,
 				2F62965B2891785900331A53 /* UIButton+.swift */,
+				2F9BF7952895393200DC26D0 /* UploadViewController.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F700F31288FE58B004EA21E /* FeedViewController.swift in Sources */,
+				2F9BF7962895393200DC26D0 /* UploadViewController.swift in Sources */,
 				2F6296692892497F00331A53 /* ProfileCollectionViewCell.swift in Sources */,
 				2F62965C2891785900331A53 /* UIButton+.swift in Sources */,
 				2F700F41288FE852004EA21E /* TabBarController.swift in Sources */,
