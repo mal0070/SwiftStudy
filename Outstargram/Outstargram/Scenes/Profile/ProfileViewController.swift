@@ -118,9 +118,21 @@ private extension ProfileViewController{
     func setupNavigationItems(){
         navigationItem.title = "UserName"
         
-        let rightBarButton = UIBarButtonItem(image: UIImage(systemName: "ellipsis"), style: .plain, target: self, action: nil)
+        let rightBarButton = UIBarButtonItem(image: UIImage(systemName: "ellipsis"), style: .plain, target: self, action: #selector(didTapRightBabButtonItem))
         
         navigationItem.rightBarButtonItem = rightBarButton
+    }
+    
+    @objc func didTapRightBabButtonItem(){
+        let actionSheet = UIAlertController(title: "정말이요?", message: "탈퇴하시게요?", preferredStyle: .actionSheet)
+       [
+        UIAlertAction(title: "회원 정보 변경", style: .default), //handler: 액션 줄 수 있음
+        UIAlertAction(title: "탈퇴하기", style: .destructive),
+        UIAlertAction(title: "닫기", style: .cancel)
+       ].forEach { actionSheet.addAction($0)}
+        
+        present(actionSheet, animated: true)
+        
     }
     
     func setUpLayOut(){
