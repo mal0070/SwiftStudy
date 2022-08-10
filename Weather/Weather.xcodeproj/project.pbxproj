@@ -14,6 +14,7 @@
 		2FB69FBD28A4198C00055C0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB69FBC28A4198C00055C0E /* Assets.xcassets */; };
 		2FB69FC028A4198C00055C0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB69FBE28A4198C00055C0E /* LaunchScreen.storyboard */; };
 		2FB69FC828A41CCB00055C0E /* WeatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB69FC728A41CCB00055C0E /* WeatherInformation.swift */; };
+		2FB69FCA28A42AC900055C0E /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB69FC928A42AC900055C0E /* ErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2FB69FBF28A4198C00055C0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FB69FC128A4198C00055C0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FB69FC728A41CCB00055C0E /* WeatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformation.swift; sourceTree = "<group>"; };
+		2FB69FC928A42AC900055C0E /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				2FB69FB328A4198C00055C0E /* AppDelegate.swift */,
 				2FB69FB528A4198C00055C0E /* SceneDelegate.swift */,
 				2FB69FB728A4198C00055C0E /* ViewController.swift */,
+				2FB69FC928A42AC900055C0E /* ErrorMessage.swift */,
 				2FB69FB928A4198C00055C0E /* Main.storyboard */,
 				2FB69FC728A41CCB00055C0E /* WeatherInformation.swift */,
 				2FB69FBC28A4198C00055C0E /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			files = (
 				2FB69FB828A4198C00055C0E /* ViewController.swift in Sources */,
 				2FB69FB428A4198C00055C0E /* AppDelegate.swift in Sources */,
+				2FB69FCA28A42AC900055C0E /* ErrorMessage.swift in Sources */,
 				2FB69FC828A41CCB00055C0E /* WeatherInformation.swift in Sources */,
 				2FB69FB628A4198C00055C0E /* SceneDelegate.swift in Sources */,
 			);
