@@ -24,13 +24,52 @@ class ViewController: UIViewController {
             case let .success(result):
                 //debugPrint("success \(result)")
                 self.configureStackView(koreaCovidOverview: result.korea)
+                let covidOverviewList = self.makeCovidOverviewList(cityCovidOverview: result)
+                self.configureChartView(covidOverviewList: covidOverviewList)
             case let .failure(error):
                 debugPrint("error \(error)")
             }
         })
     }
     
+    func makeCovidOverviewList(cityCovidOverview: CityCovidOverView) -> [CovidOverView] {
+        return [
+            cityCovidOverview.seoul,
+            cityCovidOverview.busan,
+            cityCovidOverview.daegu,
+            cityCovidOverview.incheon,
+            cityCovidOverview.gwangju,
+            cityCovidOverview.daejeon,
+            cityCovidOverview.ulsan,
+            cityCovidOverview.sejong,
+            cityCovidOverview.gyeonggi,
+            cityCovidOverview.chungbuk,
+            cityCovidOverview.chungnam,
+            cityCovidOverview.gyeongbuk,
+            cityCovidOverview.gyeongnam,
+            cityCovidOverview.gangwon,
+            cityCovidOverview.jeju
+            ]
+    }
+    
+    func configureChartView(covidOverviewList: [CovidOverView]){
+        let entries = covidOverviewList.compactMap{ [weak self] overview -> PieChartDataEntry? in //json 을 pieChart 객체로 바꾸는 작업
+            guard let self = self else { return nil }
+            return PieChartDataEntry(value: self.removeFormatString(string: overview.newCase), label: overview.countryName, data: overview) //value 는 double만 가능.
+        }
+        let dataSet = PieChartDataSet(entries: entries, label: "코로나 발생 현황")
+        self.pieChartView.data = PieChartData(dataSet: dataSet)
 
+    }
+    
+    //string -> double
+    func removeFormatString(string: String) -> Double {
+        let fomatter = NumberFormatter()
+        fomatter.numberStyle = .decimal //세자리 마다 ,
+        return fomatter.number(from: string)?.doubleValue ?? 0 //nil이면 0이 되게
+        
+    }
+    
     
     
     
