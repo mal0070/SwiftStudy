@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "907CA138-8B95-4336-8815-2CD28364818B"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF0CBF5F-31CA-40E2-BE02-6020257280D8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpotifyLoginSampleApp/EnterEmailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "EnterEmailViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "FF0CBF5F-31CA-40E2-BE02-6020257280D8 - bf09cc057094cdd6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpotifyLoginSampleApp.EnterEmailViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SpotifyLoginSampleApp.EnterEmailViewController"
+                  moduleName = "SpotifyLoginSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imina/Desktop/SwiftStudy/SpotifyLoginSampleApp/SpotifyLoginSampleApp/EnterEmailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  uuid = "FF0CBF5F-31CA-40E2-BE02-6020257280D8 - 3f6c6e0bbdc6a93b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpotifyLoginSampleApp.EnterEmailViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SpotifyLoginSampleApp.EnterEmailViewController"
+                  moduleName = "SpotifyLoginSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imina/Desktop/SwiftStudy/SpotifyLoginSampleApp/SpotifyLoginSampleApp/EnterEmailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "147">
+               </Location>
+               <Location
+                  uuid = "FF0CBF5F-31CA-40E2-BE02-6020257280D8 - 15a7e69e7c250644"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpotifyLoginSampleApp.EnterEmailViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SpotifyLoginSampleApp.EnterEmailViewController&gt;"
+                  moduleName = "SpotifyLoginSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imina/Desktop/SwiftStudy/SpotifyLoginSampleApp/SpotifyLoginSampleApp/EnterEmailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "FF0CBF5F-31CA-40E2-BE02-6020257280D8 - 139783ecb0743ffd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpotifyLoginSampleApp.EnterEmailViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SpotifyLoginSampleApp.EnterEmailViewController&gt;"
+                  moduleName = "SpotifyLoginSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imina/Desktop/SwiftStudy/SpotifyLoginSampleApp/SpotifyLoginSampleApp/EnterEmailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "FF0CBF5F-31CA-40E2-BE02-6020257280D8 - 510d5df0fe424b0e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpotifyLoginSampleApp.EnterEmailViewController.__deallocating_deinit"
+                  moduleName = "SpotifyLoginSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imina/Desktop/SwiftStudy/SpotifyLoginSampleApp/SpotifyLoginSampleApp/EnterEmailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
