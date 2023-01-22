@@ -11,6 +11,8 @@ import UIKit
 final class RankingFeatureSectionView: UIView {
     //private let cellHeight: CGFloat = 30.0 //한 섹션에 3개가 똑같이 고정되어서 나오므로, 높이 고정시킴
     
+    private var rankingFeatureList: [RankingFeature] = []
+    
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "iPhone이 처음이라면"
@@ -54,6 +56,9 @@ final class RankingFeatureSectionView: UIView {
         super.init(frame: frame)
         
         setupViews()
+        
+        fetchData()
+        collectionView.reloadData()
     }
     
     required init?(coder: NSCoder) {
@@ -63,13 +68,14 @@ final class RankingFeatureSectionView: UIView {
 
 extension RankingFeatureSectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        9
+        rankingFeatureList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RankingCollectionViewCell", for: indexPath) as? RankingCollectionViewCell
         //cell.backgroundColor = .red
-        cell?.setup()
+        let rankingFeature = rankingFeatureList[indexPath.item]
+        cell?.setup(rankingFeature: rankingFeature)
         return cell ?? UICollectionViewCell()
     }
     
@@ -108,4 +114,17 @@ extension RankingFeatureSectionView {
             $0.trailing.equalToSuperview()
         }
     }
+    
+    func fetchData(){
+        guard let url = Bundle.main.url(forResource: "RankingFeature", withExtension: "plist") else { return }
+        do {
+            let data = try Data(contentsOf: url)
+            let result = try PropertyListDecoder().decode([RankingFeature].self, from: data)
+            rankingFeatureList = result
+        }
+        catch {
+        }
+    }
+    
+    
 }

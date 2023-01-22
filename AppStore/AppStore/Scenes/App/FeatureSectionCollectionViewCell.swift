@@ -7,6 +7,7 @@
 
 import SnapKit
 import UIKit
+import Kingfisher
 
 final class FeatureSectionCollectionViewCell: UICollectionViewCell {
     private lazy var typeLabel: UILabel = {
@@ -41,13 +42,25 @@ final class FeatureSectionCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    func setup(){
+    //4. cell에 데이터 직접 받기 (1~3 데이터 받는 준비 과정)
+    func setup(feature: Feature){
         setupLayout()
         
+        /*
         typeLabel.text = "type"
         appNameLabel.text = "app name"
         descriptionLabel.text = "descrption"
         imageView.backgroundColor = .lightGray
+         */
+        typeLabel.text = feature.type
+        appNameLabel.text = feature.appName
+        descriptionLabel.text = feature.description
+        
+        if let imageURL = URL(string: feature.imageURL) {
+            imageView.kf.setImage(with: imageURL)
+        }
+        
+        
     }
 }
 

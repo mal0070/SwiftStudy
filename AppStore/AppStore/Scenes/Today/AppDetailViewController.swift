@@ -7,8 +7,11 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 final class AppDetailViewController: UIViewController {
+    private let today: Today //이걸 갖고 있어야 today에서 클릭 동작 연동 가능 -> init 필요 -> today 라는 값을 늘 가지고 있다
+    
     private let appIconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -50,15 +53,33 @@ final class AppDetailViewController: UIViewController {
         return button
     }()
     
+    
+    init(today: Today) {
+        self.today = today
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .systemBackground //darkmode!! 일때 배경색 자동으로 바뀜
         setupViews()
         
-        appIconImageView.backgroundColor = .lightGray
+        /*appIconImageView.backgroundColor = .lightGray
         titleLabel.text = "title"
         subTitleLabel.text = "subtitle"
+         */
+        
+        titleLabel.text = today.title
+        subTitleLabel.text = today.subTitle
+        if let imageURL = URL(string: today.imageURL){
+            appIconImageView.kf.setImage(with: imageURL)
+        }
     }
 
 
